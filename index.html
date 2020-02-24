@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<title>ip.dog</title>
+<meta name="definition" content="The fastest way to get your IP address.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root {
+  --color: black;
+  --background: white;
+  --small-color: #444;
+  --action-color: deepskyblue;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: white;
+    --background: black;
+    --small-color: #bbb;
+  }
+}
+
+body {
+  font: 25px/1.4 system-ui, sans-serif;
+  background: var(--background);
+  color: var(--color);
+  margin: 0;
+  cursor: pointer;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ip {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 50px 0;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 100px;
+  }
+}
+
+button {
+  background: var(--action-color);
+  font-size: 25px;
+  padding: .25em 1em .3em;
+  margin-bottom: 50px;
+  border: none;
+  border-radius: 16px;
+  font-family: inherit;
+  color: white;
+  text-shadow: 0 1px 0 black;
+  cursor: inherit;
+  outline: none;
+}
+
+@media (min-width: 600px) {
+  button {
+    font-size: 35px;
+  }
+}
+
+.notice {
+  color: var(--small-color);
+  font-size: 20px;
+  margin: 0 1em;
+}
+
+a {
+  color: var(--action-color);
+}
+
+textarea {
+  position: absolute;
+  left: -9999px;
+}
+</style>
+
+<div class="container">
+  <div class="ip">
+    <h1>{{IP}}</h1>
+    <button>{{LINE1}}</button>
+  </div>
+
+  <div class="notice">
+    <p>{{LINE3}}
+    <ul>
+      <li>{{LINE4}}
+      <li>{{LINE5}}
+      <li>{{LINE6}}
+      <li>{{LINE7}}
+      <li>{{LINE8}}
+    </ul>
+
+    <p>{{LINE9}}
+  </div>
+</div>
+
+<textarea readonly>{{IP}}</textarea>
+
+<script>
+const copyElement = document.querySelector('textarea');
+
+function listener(event) {
+  if (event.target.tagName == 'A') {
+    return;
+  }
+  copyElement.select();
+  copyElement.setSelectionRange(0, copyElement.value.length);
+  document.execCommand('copy');
+
+  document.querySelector('button').innerHTML = '{{LINE2}}';
+}
+
+document.body.addEventListener('click', listener);
+document.addEventListener('keypress', listener);
+</script>

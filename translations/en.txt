@@ -1,0 +1,9 @@
+Click anywhere to copy
+Copied
+ip.dog is the fastest way to get your IP address securely. 🐶
+Extra-short domain name.
+The whole page is the copy button so your mouse/finger doesn’t have to travel.
+It’s a dynamic site with the speed of a static one, distributed near you anywhere in the world, thanks to Cloudflare Workers.
+The whole site fits in a single TCP packet (≤ 1460 bytes) to avoid network round trips.
+Multilingual (<a href="/translate">translating</a> takes two minutes), dark mode, accessible.
+Made by <a href="https://dieulot.fr/">Alexandre Dieulot</a>. <a href="https://github.com/dieulot/ip.dog">Source code</a> available.
