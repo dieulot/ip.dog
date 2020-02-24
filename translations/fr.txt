@@ -2,7 +2,7 @@ Cliquez n’importe où pour copier
 Copié
 ip.dog est le moyen le plus rapide d’obtenir votre adresse IP de façon sécurisée. 🐶
 Nom de domaine super court.
-La page entière est le bouton pour copier, ainsi votre souris/doigt n’a pas à se déplacer.
+La page entière est le bouton pour copier, ou vous pouvez simplement appuyer sur une touche, ainsi votre souris/doigt n’a pas à se déplacer.
 C’est un site dynamique avec la vitesse d’un site statique, distribué près de chez vous partout dans le monde, grâce à Cloudflare Workers.
 Le site entier tient dans un seul paquet TCP (≤ 1460 octets) pour éviter les aller-retours réseau.
 Multilingue (<a href="/translate">traduire</a> prend deux minutes), thème sombre, accessible.
