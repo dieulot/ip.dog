@@ -1,0 +1,9 @@
+Zum kopieren irgendwo hinklicken
+Kopiert!
+ip.dog is der schnellste Weg um deine IP Adresse sicher zu bekommen. 🐶
+Super-kurze domain.
+Die gesamte Seite ist der "kopieren" Button, deine Maus/dein Finger muss sich also nicht weit bewegen! Du kannst auch eine Taste drücken, um deine IP Adresse zu kopieren!
+Dies ist eine dynamische Seite mit der Geschwindigkeit einer statischen Seite, verteilt über den ganzen Globus, möglich gemacht durch Cloudflare Workers.
+Die gesamte Seite passt in ein einziges TCP Paket (≤ 1460 Bytes) um Netzrundfahrten zu vermeiden.
+Mehrsprachige (das <a href="/translate">Übersetzen</a> dauert nur 2 Minuten), dark mode, barrierefrei.
+Entwickelt von <a href="https://dieulot.fr/">Alexandre Dieulot</a>. <a href="https://github.com/dieulot/ip.dog">Quellcode</a> verfügbar.
