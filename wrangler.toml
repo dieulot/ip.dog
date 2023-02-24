@@ -1,0 +1,16 @@
+name = "repo"
+main = "src/index.js"
+compatibility_date = "2023-02-24"
+usage_model = "bundled"
+env = { }
+
+[[routes]]
+pattern = "ip.dog/*"
+zone_name = ""
+
+[[routes]]
+pattern = "www.ip.dog/*"
+zone_name = ""
+
+[triggers]
+crons = [ ]
