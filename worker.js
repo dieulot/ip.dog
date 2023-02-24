@@ -1,6 +1,6 @@
-addEventListener('fetch', (event) => {
-  event.respondWith(handleRequest(event.request))
-})
+export default {
+  fetch: handleRequest,
+}
 
 async function handleRequest(req) {
   const path = new URL(req.url).pathname.substr(1)
@@ -54,7 +54,7 @@ function getLang(header) {
 
   header = header.toLowerCase()
   const langs = header.split(/(?:,|;)/)
-  for (lang of langs) {
+  for (let lang of langs) {
     if (lang in translations) {
       return lang
     }
