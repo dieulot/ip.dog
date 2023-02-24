@@ -1,5 +1,5 @@
 name = "repo"
-main = "src/index.js"
+main = "worker.js"
 compatibility_date = "2023-02-24"
 usage_model = "bundled"
 env = { }
