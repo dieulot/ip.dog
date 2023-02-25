@@ -24,15 +24,18 @@ async function fetch(request) {
   }
   let content = ''
 
-  if (pathname == '/') {
-    content = transform(indexHtml, ip, getLang(request.headers.get('accept-language')))
-  }
-  else if (pathname == '/translate') {
-    content = translateHtml
-  }
-  else {
-    status = 404
-    content = `404 page not found<br><a href="/">home page</a>`
+  switch (pathname) {
+    case '/':
+      content = transform(indexHtml, ip, getLang(request.headers.get('accept-language')))
+      break
+
+    case '/translate':
+      content = translateHtml
+      break
+
+    default:
+      status = 404
+      content = `404 page not found<br><a href="/">home page</a>`
   }
 
   return new Response(content, {
