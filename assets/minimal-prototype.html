@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<title>ip.dog</title>
+<meta name="description" content="The fastest way to get your IP address.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body { font: 25px system-ui; cursor: pointer; text-align: center; }
+h1 { word-break: break-all; font-weight: 600; }
+h1.v4 { font-size: 5vw; }
+h1.v6 { font-size: 8vw; }
+/*@media (min-width: 600px) { h1.v6 { font-size: 4.6vw; } }*/
+@media (min-width: 1200px) { h1.v6 { font-size: 4.2vw; } }
+/*@media (min-width: 1920px) { h1.v6 { font-size: 3.5vw; } }*/
+button { cursor: inherit; background: deepskyblue; background: hsl(205deg 100% 50%); color: white; font-size: 25px; font-family: system-ui; outline: none; padding: .25em .8em .35em; border: none; border-radius: .6em; text-shadow: 0 1px 0 black; }
+@media (min-width: 600px) { button { font-size: 25px;} }
+@media (min-width: 900px) { button { font-size: 30px;} }
+@media (min-width: 1200px) { button { font-size: 35px;} }
+
+</style>
+<h1 class="v6">2001:861:5286:7a70:5caa:1ba:6f57:dfca</h1>
+<h1 class="v4"hidden>233.233.233.222</h1>
+<button>Click anywhere to copy</button>
+<script>
+document.addEventListener('click', listener)
+document.addEventListener('keypress', listener)
+function listener() {
+  navigator.clipboard.writeText(document.querySelector('h1'))
+  document.querySelector('button').innerHTML = 'Copied'
+}
+</script>
+<script src="more.js" async></script>
