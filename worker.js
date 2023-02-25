@@ -6,13 +6,13 @@ const translations = {
 }
 // The above cannot put in a loop because Wrangler (2.11) chokes on imports with dynamic names.
 
-const indexHtml = (await import('./index.html')).default
+const indexHtml = (await import('./index.template.html')).default
   .replaceAll('\n', '')
   .replaceAll('  ', '')
   .replaceAll(': ', ':')
   .replaceAll(';}', '}')
 
-const translateHtml = (await import('./translate.html')).default
+const translateHtml = (await import('./translate.template.html')).default
   .replace('{{TEXT}}', translations['en']
     .trim()
     .replaceAll('<', '&lt;')
