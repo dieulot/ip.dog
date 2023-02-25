@@ -30,7 +30,7 @@ async function fetch(request) {
   let status = 200
   const headers = {
     'Content-Type': 'text/html; charset=utf-8',
-    'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
+    'Strict-Transport-Security': 'max-age=33333333; includeSubDomains; preload',
   }
   let content = ''
 
