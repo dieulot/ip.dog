@@ -29,10 +29,10 @@ async function fetch(request) {
 
   let body = ''
   let status = 200
-  const headers = {
-    'Content-Type': 'text/html; charset=utf-8',
-    'Strict-Transport-Security': 'max-age=33333333; includeSubDomains; preload',
-  }
+
+  const headers = new Headers()
+  headers.append('Content-Type', 'text/html; charset=utf-8')
+  headers.append('Strict-Transport-Security', 'max-age=33333333; includeSubDomains; preload')
 
   switch (pathname) {
     case '/':
