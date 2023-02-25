@@ -6,18 +6,18 @@ const translations = {
 }
 // The above cannot put in a loop because Wrangler (2.11) chokes on imports with dynamic names.
 
+const indexHtml = (await import('./index.html')).default
+.replaceAll('\n', '')
+.replaceAll('  ', '')
+.replaceAll(': ', ':')
+.replaceAll(';}', '}')
+
+const translateHtml = (await import('./translate.html')).default
+.replace('{{TEXT}}', translations['en'].trim().replaceAll('<', '&lt;').replaceAll('>', '&gt;'))
+
 export default {
   fetch,
 }
-
-const indexHtml = (await import('./index.html')).default
-  .replaceAll('\n', '')
-  .replaceAll('  ', '')
-  .replaceAll(': ', ':')
-  .replaceAll(';}', '}')
-
-const translateHtml = (await import('./translate.html')).default
-  .replace('{{TEXT}}', translations['en'].trim().replaceAll('<', '&lt;').replaceAll('>', '&gt;'))
 
 async function fetch(request) {
   const {pathname} = new URL(request.url)
