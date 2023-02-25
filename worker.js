@@ -14,10 +14,10 @@ export default {
 }
 
 const indexHtml = indexTemplate
-  .replace(/\n/g, '')
-  .replace(/  /g, '')
-  .replace(/: /g, ':')
-  .replace(/;\}/g, '}')
+  .replaceAll('\n', '')
+  .replaceAll('  ', '')
+  .replaceAll(': ', ':')
+  .replaceAll(';}', '}')
 
 const translateHtml = translateTemplate
   .replace('{{TEXT}}', translations['en'].trim().replaceAll('<', '&lt;').replaceAll('>', '&gt;'))
