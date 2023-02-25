@@ -12,9 +12,9 @@ export default {
   fetch,
 }
 
-async function fetch(req) {
-  const path = new URL(req.url).pathname
-  const ip = req.headers.get('cf-connecting-ip')
+async function fetch(request) {
+  const path = new URL(request.url).pathname
+  const ip = request.headers.get('cf-connecting-ip')
 
   let status = 200
   const headers = {
@@ -24,7 +24,7 @@ async function fetch(req) {
   let content = ''
 
   if (path == '/') {
-    content = transform(indexHtml, ip, getLang(req.headers.get('accept-language')))
+    content = transform(indexHtml, ip, getLang(request.headers.get('accept-language')))
   }
   else if (path == '/translate') {
     content = translateHtml
