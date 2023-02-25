@@ -13,6 +13,15 @@ export default {
   fetch,
 }
 
+const indexHtml = indexTemplate
+  .replace(/\n/g, '')
+  .replace(/  /g, '')
+  .replace(/: /g, ':')
+  .replace(/;\}/g, '}')
+
+const translateHtml = translateTemplate
+  .replace('{{TEXT}}', translations['en'].trim().replaceAll('<', '&lt;').replaceAll('>', '&gt;'))
+
 async function fetch(request) {
   const {pathname} = new URL(request.url)
   const ip = request.headers.get('cf-connecting-ip')
@@ -76,12 +85,3 @@ function getLang(header) {
 
   return 'en'
 }
-
-const indexHtml = indexTemplate
-  .replace(/\n/g, '')
-  .replace(/  /g, '')
-  .replace(/: /g, ':')
-  .replace(/;\}/g, '}')
-
-const translateHtml = translateTemplate
-  .replace('{{TEXT}}', translations['en'].trim().replaceAll('<', '&lt;').replaceAll('>', '&gt;'))
