@@ -1,10 +1,12 @@
 import indexTemplate from './index.html'
 import translateTemplate from './translate.html'
 
-import translationDe from './translations/de.txt'
-import translationEn from './translations/en.txt'
-import translationFr from './translations/fr.txt'
-import translationHi from './translations/hi.txt'
+const translations = {
+  'de': (await import('./translations/de.txt')).default,
+  'en': (await import('./translations/en.txt')).default,
+  'fr': (await import('./translations/fr.txt')).default,
+  'hi': (await import('./translations/hi.txt')).default,
+}
 
 export default {
   fetch: handleRequest,
@@ -77,13 +79,5 @@ const indexHtml = indexTemplate
   .replace(/: /g, ':')
   .replace(/;\}/g, '}')
 
-const translations = {}
-
-translations['de'] = translationDe
-translations['en'] = translationEn
-translations['fr'] = translationFr
-translations['hi'] = translationHi
-
-
 const translateHtml = translateTemplate
-  .replace('{{TEXT}}', translationEn.trim().replaceAll('<', '&lt;').replaceAll('>', '&gt;'))
+  .replace('{{TEXT}}', translations['en'].trim().replaceAll('<', '&lt;').replaceAll('>', '&gt;'))
