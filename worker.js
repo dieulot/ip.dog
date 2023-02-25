@@ -9,10 +9,10 @@ const translations = {
 }
 
 export default {
-  fetch: handleRequest,
+  fetch,
 }
 
-async function handleRequest(req) {
+async function fetch(req) {
   const path = new URL(req.url).pathname
   const ip = req.headers.get('cf-connecting-ip')
 
