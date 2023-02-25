@@ -11,7 +11,7 @@ export default {
 }
 
 async function handleRequest(req) {
-  const path = new URL(req.url).pathname.substr(1)
+  const path = new URL(req.url).pathname
   const ip = req.headers.get('cf-connecting-ip')
 
   let status = 200
@@ -21,10 +21,10 @@ async function handleRequest(req) {
   }
   let content = ''
 
-  if (path === '') {
+  if (path == '/') {
     content = transform(indexHtml, ip, getLang(req.headers.get('accept-language')))
   }
-  else if (path == 'translate') {
+  else if (path == '/translate') {
     content = translateHtml
   }
   else {
