@@ -1,3 +1,5 @@
+import e404Html from './404.template.html'
+
 const translations = {
   'de': (await import('./translations/de.txt')).default,
   'en': (await import('./translations/en.txt')).default,
@@ -45,7 +47,7 @@ async function fetch(request) {
 
     default:
       status = 404
-      body = `404 page not found<br><a href="/">home page</a>`
+      body = e404Html
   }
 
   return new Response(body, {
