@@ -57,10 +57,10 @@ function transform(html, ip, lang) {
   const translationLines = translations[lang].split('\n')
   html = html
     .replace('{{LANG}}', lang)
-    .replace(/\{\{LINE([0-9]+)\}\}/g, (all, p1) => {
+    .replaceAll(/\{\{LINE([0-9]+)\}\}/g, (all, p1) => {
       return translationLines[p1 - 1]
     })
-    .replace(/\{\{IP\}\}/g, ip)
+    .replaceAll('{{IP}}', ip)
     .replace(' copyElement.value.length', ip.length)
 
   return html
