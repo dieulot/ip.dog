@@ -27,28 +27,28 @@ async function fetch(request) {
   const {pathname} = new URL(request.url)
   const ip = request.headers.get('cf-connecting-ip')
 
+  let body = ''
   let status = 200
   const headers = {
     'Content-Type': 'text/html; charset=utf-8',
     'Strict-Transport-Security': 'max-age=33333333; includeSubDomains; preload',
   }
-  let content = ''
 
   switch (pathname) {
     case '/':
-      content = transform(indexHtml, ip, getLang(request.headers.get('accept-language')))
+      body = transform(indexHtml, ip, getLang(request.headers.get('accept-language')))
       break
 
     case '/translate':
-      content = translateHtml
+      body = translateHtml
       break
 
     default:
       status = 404
-      content = `404 page not found<br><a href="/">home page</a>`
+      body = `404 page not found<br><a href="/">home page</a>`
   }
 
-  return new Response(content, {
+  return new Response(body, {
     status,
     headers,
   })
