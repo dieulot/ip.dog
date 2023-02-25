@@ -19,10 +19,6 @@ async function handleRequest(req) {
   else if (path == 'translate') {
     content = translateHtml
   }
-  else if (path == 'favicon.ico') {
-    headers['Content-Type'] = 'image/png'
-    content = (await fetch('https://image.noelshack.com/fichiers/2020/08/6/1582407456-favicon.png')).body
-  }
   else {
     status = 404
     content = `404 page not found<br><a href="/">home page</a>`
