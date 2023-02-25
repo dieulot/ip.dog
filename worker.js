@@ -1,6 +1,3 @@
-import indexTemplate from './index.html'
-import translateTemplate from './translate.html'
-
 const translations = {
   'de': (await import('./translations/de.txt')).default,
   'en': (await import('./translations/en.txt')).default,
@@ -13,13 +10,13 @@ export default {
   fetch,
 }
 
-const indexHtml = indexTemplate
+const indexHtml = (await import('./index.html')).default
   .replaceAll('\n', '')
   .replaceAll('  ', '')
   .replaceAll(': ', ':')
   .replaceAll(';}', '}')
 
-const translateHtml = translateTemplate
+const translateHtml = (await import('./translate.html')).default
   .replace('{{TEXT}}', translations['en'].trim().replaceAll('<', '&lt;').replaceAll('>', '&gt;'))
 
 async function fetch(request) {
