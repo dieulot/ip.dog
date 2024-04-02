@@ -30,7 +30,7 @@ async function fetch(request, env) {
 
   let ip
   if (env.isDev) {
-    ip = '127.0.0.1'
+    ip = generateRandomIpv4OrIpv6Address()
   }
   else {
     ip = request.headers.get('cf-connecting-ip')
@@ -94,4 +94,13 @@ function getLang(header) {
   }
 
   return 'en'
+}
+
+function generateRandomIpv4OrIpv6Address() {
+  if (Math.random() < .5) {
+    return crypto.getRandomValues(new Uint8Array(4)).join('.')
+  }
+  else {
+    return Array.from(crypto.getRandomValues(new Uint16Array(8))).map((e) => e.toString(16)).join(':')
+  }
 }
