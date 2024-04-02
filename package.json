@@ -4,6 +4,6 @@
   },
   "scripts": {
     "start": "wrangler dev --assets 'assets/'",
-    "deploy": "wrangler publish --assets 'assets/'"
+    "deploy": "wrangler deploy --assets 'assets/'"
   }
 }
