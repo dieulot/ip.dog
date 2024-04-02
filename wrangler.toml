@@ -1,16 +1,15 @@
-name = "repo"
+name = "ipdog"
 main = "worker.js"
-compatibility_date = "2023-02-24"
-usage_model = "bundled"
+compatibility_date = "2024-03-26"
 env = { }
 
 [[routes]]
 pattern = "ip.dog/*"
-zone_name = ""
+zone_id = "..."
 
 [[routes]]
 pattern = "www.ip.dog/*"
-zone_name = ""
+zone_id = "..."
 
 [triggers]
 crons = [ ]
