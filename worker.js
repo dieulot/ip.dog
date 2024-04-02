@@ -25,9 +25,16 @@ export default {
   fetch,
 }
 
-async function fetch(request) {
+async function fetch(request, env) {
   const {pathname} = new URL(request.url)
-  const ip = request.headers.get('cf-connecting-ip')
+
+  let ip
+  if (env.isDev) {
+    ip = '127.0.0.1'
+  }
+  else {
+    ip = request.headers.get('cf-connecting-ip')
+  }
 
   let body = ''
   let status = 200
