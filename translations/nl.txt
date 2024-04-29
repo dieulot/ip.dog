@@ -1,0 +1,9 @@
+Klik ergens op de pagina om te kopiëren
+Gekopieerd
+ip.dog is de snelste manier om uw IP-adres op te halen. 🐶
+Extra korte domeinnaam.
+De hele pagina is een kopieerknop, of u kunt gewoon op een toets drukken zodat u de muis niet hoeft te verplaatsen.
+Het is een dynamische site met de snelheid van een statische site, overal ter wereld bij u in de buurt dankzij Cloudflare Workers.
+De hele site past in één enkel TCP-pakket (≤ 1460 bytes) om Network Round Trips te voorkomen.
+Meertalig (<a href="/translate">vertalen</a> duurt twee minuten), donkere modus, toegankelijk.
+Gemaakt door <a href="https://dieulot.fr/">Alexandre Dieulot</a>. <a href="https://github.com/dieulot/ip.dog">Broncode</a> beschikbaar.
