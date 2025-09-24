@@ -3,13 +3,9 @@ main = "worker.js"
 compatibility_date = "2024-03-26"
 env = { }
 
-[[routes]]
-pattern = "ip.dog/*"
-zone_id = "..."
-
-[[routes]]
-pattern = "www.ip.dog/*"
-zone_id = "..."
+# [[routes]]
+# pattern = "ip.smht.eu/*"
+# zone_id = "..."
 
 [triggers]
 crons = [ ]

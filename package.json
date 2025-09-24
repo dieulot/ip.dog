@@ -1,6 +1,6 @@
 {
-  "devDependencies": {
-    "wrangler": "3.44.0"
+    "devDependencies": {
+    "wrangler": "^4.27.0"
   },
   "scripts": {
     "start": "wrangler dev --assets 'assets/'",

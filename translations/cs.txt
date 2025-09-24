@@ -1,0 +1,9 @@
+Klikni kamkoliv pro zkopírování
+Zkopírováno
+ip.dog je nejrychlejší cesta jak získat Vaši IP adresu bezpečně. 🐶
+Extra krátká doména.
+Celá stránka je kopírovací tlačítko, anebo můžete zmáčknout jakoukoliv klávesu, abyste nemuseli pohnout prstem/myší.
+Je to dynamická stránka s rychlostí statické, která je díky Cloudflare Workers distribuována blízko Vás kdekoli na světě.
+Celá stránka se vejde do jednoho paketu TCP (≤ 1460 bajtů), aby se zabránilo obousměrnému zpoždění.
+Vícejazyčnost (<a href="/translate">překlad</a> zabere dvě minuty), tmavý režim, přístupnost.
+Vytvořil <a href="https://dieulot.fr/">Alexandre Dieulot</a>. <a href="https://github.com/dieulot/ip.dog">Zdrojový kód</a> je dostupný.
